@@ -14,7 +14,6 @@ export default function FinalCtaSection() {
           BlockBatch.
         </h3>
         <div className="flex flex-col min-[400px]:flex-row gap-4 justify-center">
-          {/* Get Started Button */}
           <Button
             type="button"
             className="bg-[#18181B] py-3 px-8 flex gap-4 text-sm font-medium 2xl:text-2xl 2xl:py-5 2xl:px-12 
@@ -24,7 +23,6 @@ export default function FinalCtaSection() {
             Get Started <ArrowRight />
           </Button>
 
-          {/* Request Demo Button */}
           <Button
             type="button"
             variant="outline"
