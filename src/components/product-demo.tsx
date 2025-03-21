@@ -21,8 +21,6 @@ export function ProductDemo() {
 
                 <div className="space-y-3 mb-8">
                     {PRODUCT_BENEFITS.map((val, index) => <ProductListItem key={`${index}_${Math.random()}`} value={val} />)}
-
-
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-4">
