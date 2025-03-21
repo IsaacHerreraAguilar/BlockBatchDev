@@ -2,9 +2,11 @@ import Image from "next/image";
 import logo from '../../public/placeholder.png';
 import { ArrowRight, CircleCheckBig } from "lucide-react";
 
+
+const PRODUCT_BENEFITS = ["Real-time transaction monitoring", "Intuitive batch payment creation", "Comprehensive analytics and reporting"]
 export function ProductDemo() {
     return (
-        <section className="mx-auto container px-4 md:px-12 py-3  flex justify-between items-center">
+        <section className="mx-auto container px-4 md:px-12 py-3  flex flex-col md:flex-row  justify-between items-center">
             <div className="py-6 max-w-lg">
                 <div className="inline-block bg-gray-900 text-white text-sm px-3 py-1 rounded-md mb-2">
                     Interactive Demo
@@ -18,35 +20,18 @@ export function ProductDemo() {
                 </p>
 
                 <div className="space-y-3 mb-8">
-                    <div className="flex items-center">
-                        <div className="bg-gray-100 rounded-full p-1 mr-3">
-                            <CircleCheckBig size={18} className="text-gray-600" />
-                        </div>
-                        <span className="text-gray-600">Real-time transaction monitoring</span>
-                    </div>
+                    {PRODUCT_BENEFITS.map((val, index) => <ProductListItem key={`${index}_${Math.random()}`} value={val} />)}
 
-                    <div className="flex items-center">
-                        <div className="bg-gray-100 rounded-full p-1 mr-3">
-                            <CircleCheckBig size={18} className="text-gray-600" />
-                        </div>
-                        <span className="text-gray-600">Intuitive batch payment creation</span>
-                    </div>
 
-                    <div className="flex items-center">
-                        <div className="bg-gray-100 rounded-full p-1 mr-3">
-                            <CircleCheckBig size={18} className="text-gray-600" />
-                        </div>
-                        <span className="text-gray-600">Comprehensive analytics and reporting</span>
-                    </div>
                 </div>
 
-                <div className="flex space-x-4">
-                    <button className="bg-gray-900 text-white px-4 py-2 rounded flex items-center">
+                <div className="flex flex-col md:flex-row gap-4">
+                    <button className="bg-gray-900 text-white justify-center px-4 py-3  gap-4 rounded-md hover:scale-102 active:scale-98 flex items-center">
                         Try Demo
-                        <ArrowRight size={16} className="ml-2" />
+                        <ArrowRight size={16} />
                     </button>
 
-                    <button className="text-gray-900 px-4 py-2 border border-gray-300 rounded">
+                    <button className="text-gray-900 px-4 py-3 border border-gray-300 rounded-md hover:scale-102 active:scale-98">
                         Request Personalized Demo
                     </button>
                 </div>
@@ -60,5 +45,16 @@ export function ProductDemo() {
                 </div>
             </div>
         </section>
+    )
+}
+
+function ProductListItem({ value }: { value: string; icon?: React.ReactNode }) {
+    return (
+        <div className="flex items-center">
+            <div className="bg-gray-100 rounded-full p-1 mr-3">
+                <CircleCheckBig size={18} className="text-gray-600" />
+            </div>
+            <span className="text-gray-600">{value}</span>
+        </div>
     )
 }
