@@ -20,12 +20,12 @@ export function Header() {
     return (
         <div className="mx-auto container px-12 py-3  flex justify-between items-center">
             <Image src={logo} width={73} alt="BlockBatch" height={40} />
-            <nav className="flex gap-4">
-                {NAV_LINKS.map((value) => <NavigationItem {...value} />)}
+            <nav className="flex gap-6">
+                {NAV_LINKS.map((value, index) => <NavigationItem key={`${index}_${Math.random()}`} {...value} />)}
             </nav>
-            <div className="flex gap-2 items-center">
-                <button>kefnd</button>
-                <button>kefnd</button>
+            <div className="flex gap-2.5 items-center">
+                <button>Login</button>
+                <button className="px-4 py-2.5 bg-primary text-white rounded-md ">Get Started</button>
             </div>
         </div>
     )
