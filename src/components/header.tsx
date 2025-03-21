@@ -37,10 +37,14 @@ export function Header() {
                 {/* This is a sheet for Mobile Navigation */}
                 <Sheet>
                     <SheetTrigger className="block md:hidden"><Menu /></SheetTrigger>
-                    <SheetContent>
-                        <nav className="flex flex-col gap-6 mt-8">
+                    <SheetContent className="divide-y-2">
+                        <nav className="flex flex-col gap-6 mt-8 pb-4">
                             {NAV_LINKS.map((value, index) => <NavigationItem key={`${index}_${Math.random()}`} {...value} />)}
                         </nav>
+                        <div className=" flex flex-col gap-2.5 mt-2">
+                            <button className="px-4 py-2.5 bg-primary text-white rounded-md font-medium text-sm">Get Started</button>
+                            <button className="font-medium text-sm border rounded-sm px-4 py-2.5">Login</button>
+                        </div>
                     </SheetContent>
                 </Sheet>
             </header>
