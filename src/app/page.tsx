@@ -1,9 +1,9 @@
-import Image from "next/image";
+import { ProductDemo } from "@/components/product-demo";
 
 export default function Home() {
   return (
     <div>
-      Home
+      <ProductDemo />
     </div>
   );
 }

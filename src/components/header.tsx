@@ -31,7 +31,7 @@ export function Header() {
                 </nav>
                 <div className=" hidden md:flex gap-2.5 items-center">
                     <button className="font-medium text-sm">Login</button>
-                    <button className="px-4 py-2.5 bg-primary text-white rounded-md font-medium text-sm hover:opacity-95 hover:scale-102">Get Started</button>
+                    <button className="px-4 py-2.5 bg-primary text-white rounded-md font-medium text-sm hover:opacity-95 hover:scale-102 cursor-pointer active:scale-98">Get Started</button>
                 </div>
 
                 {/* This is a sheet for Mobile Navigation */}
@@ -42,7 +42,7 @@ export function Header() {
                             {NAV_LINKS.map((value, index) => <NavigationItem key={`${index}_${Math.random()}`} {...value} />)}
                         </nav>
                         <div className=" flex flex-col gap-2.5 mt-2">
-                            <button className="px-4 py-2.5 bg-primary text-white rounded-md font-medium text-sm">Get Started</button>
+                            <button className="px-4 py-2.5 bg-primary text-white rounded-md font-medium text-sm cursor-pointer hover:scale-102 active:scale-98">Get Started</button>
                             <button className="font-medium text-sm border rounded-sm px-4 py-2.5">Login</button>
                         </div>
                     </SheetContent>
