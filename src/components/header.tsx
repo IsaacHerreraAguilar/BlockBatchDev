@@ -31,7 +31,7 @@ export function Header() {
                 </nav>
                 <div className=" hidden md:flex gap-2.5 items-center">
                     <button className="font-medium text-sm">Login</button>
-                    <button className="px-4 py-2.5 bg-primary text-white rounded-md font-medium text-sm">Get Started</button>
+                    <button className="px-4 py-2.5 bg-primary text-white rounded-md font-medium text-sm hover:opacity-95 hover:scale-102">Get Started</button>
                 </div>
 
                 {/* This is a sheet for Mobile Navigation */}
