@@ -1,6 +1,7 @@
 import {
     Sheet,
     SheetContent,
+    SheetTitle,
     SheetTrigger
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -38,6 +39,9 @@ export function Header() {
                 <Sheet>
                     <SheetTrigger className="block md:hidden"><Menu /></SheetTrigger>
                     <SheetContent className="divide-y-2">
+                        <SheetTitle className="border-none">
+                            <Image src={logo} width={73} alt="BlockBatch" height={40} />
+                        </SheetTitle>
                         <nav className="flex flex-col gap-6 mt-8 pb-4">
                             {NAV_LINKS.map((value, index) => <NavigationItem key={`${index}_${Math.random()}`} {...value} />)}
                         </nav>
