@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
+    "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.483.0",
     "@types/classnames": "^2.3.0",
     "autoprefixer": "^10.4.21",
