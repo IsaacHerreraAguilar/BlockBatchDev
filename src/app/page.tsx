@@ -1,3 +1,4 @@
+import ComparisonSection from "./components/ComparisonSection";
 import Hero from './components/Hero';
 import FeaturesOverviewSection from "./components/FeaturesOverviewSection";
 import { ProductDemo } from "@/components/product-demo";
@@ -8,6 +9,7 @@ export default function Home() {
     <div>
       <Hero />
       <FeaturesOverviewSection />
+      <ComparisonSection />
       <ProductDemo />
       <FinalCtaSection />
     </div>
