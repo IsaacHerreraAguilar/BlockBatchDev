@@ -1,7 +1,8 @@
 import React, { InputHTMLAttributes, forwardRef } from 'react';
 import cn from 'classnames';
 
-export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
+export interface CheckboxProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   label?: React.ReactNode;
   error?: string;
   className?: string;
@@ -11,11 +12,11 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, error, className, id, ...props }, ref) => {
     return (
       <div className={cn('flex flex-col', className)}>
-        <div className="flex items-start">
-          <div className="flex items-center h-5">
+        <div className='flex items-start'>
+          <div className='flex items-center h-5'>
             <input
               ref={ref}
-              type="checkbox"
+              type='checkbox'
               id={id}
               className={cn(
                 'h-4 w-4 rounded border-gray-300',
@@ -38,10 +39,10 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             </label>
           )}
         </div>
-        {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
+        {error && <p className='mt-1 text-sm text-red-500'>{error}</p>}
       </div>
     );
   }
 );
 
-Checkbox.displayName = 'Checkbox'; 
+Checkbox.displayName = 'Checkbox';

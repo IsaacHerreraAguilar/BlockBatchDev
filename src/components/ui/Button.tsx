@@ -21,11 +21,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    const baseStyles = 'px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center justify-center';
-    
+    const baseStyles =
+      'px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center justify-center';
+
     const variants = {
       primary: 'bg-primary text-white',
-      outline: 'border border-primary text-primary'
+      outline: 'border border-primary text-primary',
     };
 
     return (
@@ -43,7 +44,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {isLoading ? (
-          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+          <div className='w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin' />
         ) : (
           children
         )}
@@ -52,4 +53,4 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-Button.displayName = 'Button'; 
+Button.displayName = 'Button';

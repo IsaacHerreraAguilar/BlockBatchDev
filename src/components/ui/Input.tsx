@@ -3,20 +3,31 @@ import cn from 'classnames';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
+  labelComponent?: React.ReactNode;
   error?: string;
   fullWidth?: boolean;
   className?: string;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, fullWidth = true, className, ...props }, ref) => {
+  (
+    { label, labelComponent, error, fullWidth = true, className, ...props },
+    ref
+  ) => {
     return (
-      <div className={cn('flex flex-col gap-1', fullWidth && 'w-full', className)}>
-        {label && (
-          <label className="text-sm font-medium text-gray-700" htmlFor={props.id}>
-            {label}
-          </label>
-        )}
+      <div
+        className={cn('flex flex-col gap-1', fullWidth && 'w-full', className)}
+      >
+        {labelComponent
+          ? labelComponent
+          : label && (
+              <label
+                className='text-sm font-medium text-gray-700'
+                htmlFor={props.id}
+              >
+                {label}
+              </label>
+            )}
         <input
           ref={ref}
           className={cn(
@@ -29,10 +40,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
           {...props}
         />
-        {error && <span className="text-sm text-red-500">{error}</span>}
+        {error && <span className='text-sm text-red-500'>{error}</span>}
       </div>
     );
   }
 );
 
-Input.displayName = 'Input'; 
+Input.displayName = 'Input';
