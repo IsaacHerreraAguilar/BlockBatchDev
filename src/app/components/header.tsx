@@ -3,11 +3,11 @@ import {
     SheetContent,
     SheetTitle,
     SheetTrigger
-} from "@/components/ui/sheet";
+} from "@/app/components/ui/sheet";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from '../../public/logo.png';
+import logo from '/public/logo.png';
 
 const NAV_LINKS = [{
     text: 'Features',

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from '../../public/placeholder.png';
+import logo from '/public/placeholder.png';
 import { ArrowRight, CircleCheckBig } from "lucide-react";
 
 

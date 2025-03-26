@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from '../ui/Input';
-import { Button } from '../ui/Button';
+import { Button } from '../../ui/Button';
 import { Checkbox } from '../ui/Checkbox';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -73,7 +73,7 @@ export const RegisterForm = () => {
   };
 
   const handleGoogleSignIn = () => {
-    
+
   };
 
   return (

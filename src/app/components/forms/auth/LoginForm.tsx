@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/Button';
-import { Checkbox } from '@/components/ui/Checkbox';
-import { Input } from '@/components/ui/Input';
+import { Button } from '@/app/components/ui/Button';
+import { Checkbox } from '@/app/components/ui/Checkbox';
+import { Input } from '@/app/components/ui/Input';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
