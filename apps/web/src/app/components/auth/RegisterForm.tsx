@@ -31,7 +31,7 @@ export const RegisterForm = () => {
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
