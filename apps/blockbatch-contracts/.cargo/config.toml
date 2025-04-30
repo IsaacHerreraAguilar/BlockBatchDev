@@ -1,0 +1,13 @@
+[build]
+# Set default target to wasm32-unknown-unknown for Soroban contracts
+# target = "wasm32-unknown-unknown"
+
+[target.wasm32-unknown-unknown]
+# Set rustflags specifically for the wasm32-unknown-unknown target
+# Disable reference-types, which is often incompatible with Soroban environments
+rustflags = [
+    "-C",
+    "link-arg=-zstack-size=16384",     # Adjust stack size if needed
+    "-C",
+    "target-feature=-reference-types",
+]
