@@ -1,0 +1,11 @@
+[package]
+name = "dividend-contract"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+soroban-sdk = { version = "22", features = ["std"] }
+chrono = { version = "0.4", features = ["std"] }
+
+[dev-dependencies]
+soroban-sdk = { version = "22", features = ["testutils"] }
