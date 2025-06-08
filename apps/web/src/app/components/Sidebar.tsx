@@ -7,9 +7,7 @@ import Image from 'next/image';
 import { 
   Home, 
   FileText, 
-  Users, 
-  Settings, 
-  Menu,
+  Settings,
   X
 } from 'lucide-react';
 import logo from '/public/logo.png';

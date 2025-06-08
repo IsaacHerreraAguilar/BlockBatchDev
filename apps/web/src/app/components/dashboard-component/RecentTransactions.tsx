@@ -1,6 +1,17 @@
 import React from "react";
 
-const transactions = [
+type TransactionStatus = "Completed" | "Pending" | "Failed";
+
+interface Transaction {
+  id: string;
+  date: string;
+  desc: string;
+  amount: string;
+  recipients: number;
+  status: TransactionStatus;
+}
+
+const transactions: Transaction[] = [
   { id: "TX-7829", date: "2023-03-15", desc: "March Payroll", amount: "$45,500.00", recipients: 42, status: "Completed" },
   { id: "TX-7830", date: "2023-03-16", desc: "Vendor Payments", amount: "$12,400.00", recipients: 15, status: "Completed" },
   { id: "TX-7831", date: "2023-03-17", desc: "Affiliate Commissions", amount: "$8,750.00", recipients: 23, status: "Pending" },
